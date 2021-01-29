@@ -1,3 +1,1 @@
-# lib/chatter_web/templates/chat_room/show.html.eex
-
 <h1 data-role="room-title"><%= @chat_room.name %></h1>
