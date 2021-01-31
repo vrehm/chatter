@@ -44,10 +44,11 @@ jobs:
           restore-keys: |
             ${{ runner.OS }}-build-
             ${{ runner.OS }}-
-      - uses: actions/setup-elixir@v2
+      - uses: actions/setup-elixir@v1
         with:
           otp-version: 23.2.3
           elixir-version: 1.11.3
+          experimental-otp: true
       - uses: nanasess/setup-chromedriver@master
       - name: Install Dependencies
         run: mix deps.get
