@@ -10,8 +10,9 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :chatter, ChatterWeb.Endpoint,
-  url: [host: "example.com", port: 80],
+  url: [host: "chatter.vrehm.fr", port: 443],
   cache_static_manifest: "priv/static/cache_manifest.json"
+  check_origin: ["https://chatter.vrehm.fr", "http://chatter.vrehm.fr"]
 
 # Do not print debug messages in production
 config :logger, level: :info
