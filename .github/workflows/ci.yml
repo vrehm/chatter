@@ -5,7 +5,7 @@ on: [push]
 # PostgreSQL as a database. Will also cache dependencies and build
 # artifacts to speed up the build.
 jobs:
-  test suite:
+  tests:
     env:
       MIX_ENV: ci
       DATABASE_URL: postgres://postgres:postgres@localhost:5432/postgres
