@@ -11,7 +11,7 @@ use Mix.Config
 # before starting your production server.
 config :chatter, ChatterWeb.Endpoint,
   url: [host: "chatter.vrehm.fr", port: 443],
-  cache_static_manifest: "priv/static/cache_manifest.json"
+  cache_static_manifest: "priv/static/cache_manifest.json",
   check_origin: ["https://chatter.vrehm.fr", "http://chatter.vrehm.fr"]
 
 # Do not print debug messages in production
