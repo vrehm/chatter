@@ -68,7 +68,7 @@ defmodule Chatter.MixProject do
 
   defp watch_assets(_) do
     Mix.shell().cmd(
-      "cd assets && ./node_modules/webpack/bin/webpack.js --mode development --watch"
+      "cd assets && webpack --mode development --watch"
     )
   end
 end
