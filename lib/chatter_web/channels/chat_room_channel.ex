@@ -1,9 +1,14 @@
 # lib/chatter_web/channels/chat_room_channel.ex
 
 defmodule ChatterWeb.ChatRoomChannel do
-    use ChatterWeb, :channel
+  use ChatterWeb, :channel
 
-    def join("chat_room:" <> _room_name, _msg, socket) do
-        {:ok, socket}
-    end
+  def join("chat_room:" <> _room_name, _msg, socket) do
+    {:ok, socket}
+  end
+
+  def handle_in("new_message", payload, socket) do
+    broadcast(socket, "new_message", payload)
+    {:noreply, socket}
+  end
 end

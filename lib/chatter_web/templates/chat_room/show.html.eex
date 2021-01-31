@@ -2,7 +2,12 @@
   <%= @chat_room.name %>
 <% end %>
 
-<form>
+<div>
+  <ul data-role="messages">
+  </ul>
+</div>
+
+<form id="new-message-form">
   <label>
     New Message <input id="message" name="message" type="text" />
   </label>
