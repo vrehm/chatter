@@ -5,11 +5,11 @@ on: [push]
 # PostgreSQL as a database. Will also cache dependencies and build
 # artifacts to speed up the build.
 jobs:
-  test:
+  test suite:
     env:
       MIX_ENV: ci
       DATABASE_URL: postgres://postgres:postgres@localhost:5432/postgres
-    runs-on: ubuntu-18-04
+    runs-on: ubuntu-latest
 
     services:
       db:
@@ -46,8 +46,8 @@ jobs:
             ${{ runner.OS }}-
       - uses: actions/setup-elixir@v1.0.0
         with:
-          otp-version: 23.2.3
-          elixir-version: 1.11.3
+          otp-version: 22.x
+          elixir-version: 1.9.x
       - uses: nanasess/setup-chromedriver@master
       - name: Install Dependencies
         run: mix deps.get
