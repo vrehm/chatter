@@ -53,6 +53,7 @@ jobs:
       - name: Install Dependencies
         run: mix deps.get
       - run: mix compile
+      - run: mix ecto.create
       - run: mix ecto.migrate
       - run: npm install
         working-directory: ./assets
