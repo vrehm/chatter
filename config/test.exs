@@ -28,10 +28,3 @@ config :wallaby,
   chrome: [
     headless: true
   ]
-
-# Configure the database for GitHub Actions
-if System.get_env("GITHUB_ACTIONS") do
-  config :app, App.Repo,
-    username: "postgres",
-    password: "postgres"
-end
